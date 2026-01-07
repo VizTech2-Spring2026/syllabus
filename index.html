@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<title>VizTech2_Jan2026</title>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+<div id="tools-list"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/marked@14/marked.min.js"></script>
+<script>
+    fetch('syllabus.md')
+        .then(r => r.ok ? r.text() : Promise.reject(`HTTP ${r.status}`))
+        .then(markdown => {
+            document.getElementById('tools-list').innerHTML = marked.parse(markdown);
+        })
+        .catch(e => {
+            document.getElementById('tools-list').innerHTML = `<p style="color:red">Load error: ${e}</p>`;
+        });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+/* Consolidated #tools-list Styles - No duplicates, same visual output */
+#tools-list, #tools-list * {
+    box-sizing: border-box;
+}
+
+#tools-list {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#tools-list h1, #tools-list h2, #tools-list h3 {
+    font-weight: 600;
+    color: #111;
+    margin-top: 2rem !important;  /* Force larger space above */
+    margin-bottom: 0.25rem !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+#tools-list h1 { font-size: 2.2rem; } /* Optional: add if desired */
+#tools-list h2 { font-size: 1.5rem; }
+#tools-list h3 { font-size: 1.3rem; }
+#tools-list h4 { margin-top: 1rem !important;  }
+
+/* Narrow LEFT-aligned text (consolidated selectors) */
+#tools-list p:not(table p),
+#tools-list ul:not(table ul),
+#tools-list ol:not(table ol),
+#tools-list blockquote,
+#tools-list > *:not(table) {
+    max-width: 650px;
+    margin: 0.75rem 0 0rem 0;
+}
+
+/* Full-width table (merged rules) */
+#tools-list table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    table-layout: auto;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#tools-list th, #tools-list td {
+    text-align: left;
+    vertical-align: top;
+    padding: 1rem 1.25rem; /* Final padding value */
+    border: 1px solid #ddd;
+}
+
+#tools-list th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+#tools-list tr:nth-child(even) { background: #fafbfc; }
+#tools-list tr:hover { background: #e3f2fd; }
+
+#tools-list a {color: #B908DD}
